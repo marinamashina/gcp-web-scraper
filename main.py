@@ -14,7 +14,9 @@ def set_environment():
 
 def init_webdriver():
     """Initialize and return a Chrome WebDriver."""
-    service = Service(ChromeDriverManager().install())
+    #service = Service(ChromeDriverManager().install())
+    service = Service("/Users/marina.kurmanova/.wdm/drivers/chromedriver/mac64/140.0.7339.82/chromedriver-mac-arm64/chromedriver")
+
     return webdriver.Chrome(service=service)
 
 def scrape_job_postings(driver):
